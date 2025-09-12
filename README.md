@@ -17,3 +17,26 @@ Este projeto é um exercício da **imersão de agentes de IA do Alura**, utiliza
 - Validar saídas do LLM com **modelos de dados**
 - Transformar respostas de IA em **JSON estruturado**
 - Testar e depurar funções de interação com IA
+
+
+RAG – Retrieval-Augmented Generation
+
+É uma técnica usada em modelos de linguagem (como ChatGPT, LLaMA, etc.) para melhorar a geração de respostas.
+
+Funciona combinando duas coisas:
+
+Recuperação (Retrieval): o modelo procura informações em uma base de dados externa (documentos, PDFs, sites, etc.).
+
+Geração (Generation): o modelo usa essas informações para gerar respostas precisas e contextualizadas.
+
+Resumo simples:
+
+O RAG ajuda o modelo a não depender só do que ele “lembra”, mas também buscar dados externos para dar respostas mais confiáveis.
+
+
+Nesta aula, você vai:
+Carregar e processar documentos PDF.
+Dividir textos longos em chunks para otimizar a busca de informações.
+Criar embeddings e armazenar em uma Vector Store com FAISS.
+Construir uma chain RAG que busca contexto e gera respostas baseadas em documentos.
+Formatar respostas com citações exatas das fontes consultadas.
