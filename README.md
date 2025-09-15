@@ -1,42 +1,62 @@
-# Imersão Agentes AI
+# Imersão Agentes AI – Projeto de Service Desk Inteligente
 
-Este projeto é um exercício da **imersão de agentes de IA do Alura**, utilizando **LangChain** e o modelo **Google Gemini**.
+Este projeto foi desenvolvido como parte da Imersão de Agentes de IA da Alura, com foco em construir um Service Desk inteligente que automatiza a triagem de solicitações e responde perguntas com base em documentos internos.
 
-## O que foi feito até agora
+## 🎯 Objetivo
 
-- Instalação e configuração do LLM (`ChatGoogleGenerativeAI`) com chave da API.
-- Criação do **prompt de triagem** (`TRIAGEM_PROMPT`) para Service Desk.
-- Definição do modelo **TriagemOut** com Pydantic, garantindo estrutura do JSON.
-- Implementação da função **triagem** que recebe a mensagem do usuário e retorna uma resposta validada.
-- Testes iniciais de mensagens para verificação do funcionamento da triagem.
+Demonstrar como criar um agente de IA capaz de:
 
-## Competências trabalhadas
+Triar solicitações (AUTO_RESOLVER, PEDIR_INFO, ABRIR_CHAMADO).
 
-- Entender e configurar um **LLM** em Python
-- Criar **prompts do sistema** claros e estruturados
-- Validar saídas do LLM com **modelos de dados**
-- Transformar respostas de IA em **JSON estruturado**
-- Testar e depurar funções de interação com IA
+Responder com contexto, usando RAG (Retrieval-Augmented Generation) em documentos PDF.
+
+Gerar saídas estruturadas em JSON, facilitando integrações.
+
+Orquestrar o fluxo de decisões via LangGraph, tornando o agente dinâmico.
+
+## Tecnologias
+
+LangChain → framework para integração com LLMs.
+
+LangGraph → modelagem do fluxo do agente.
+
+Google Gemini (via API) → modelo de linguagem principal.
+
+pymupdf → leitura e processamento de PDFs.
+
+dotenv → gerenciamento de credenciais.
+
+## 📂 Estrutura do Projeto
+
+agents.ipynb → código principal (Jupyter Notebook).
+
+pdfs/ → documentos que servem como base de conhecimento.
+
+.env → chave da API do Google Gemini (não incluída no repositório).
+
+## Como Rodar
+
+### 1. Criar ambiente virtual:
+
+python3 -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+.venv\Scripts\activate      # Windows
+
+### 2. pip install -r requirements.txt
+
+### 3. Configuração da Chave da API do Google Gemini  
+
+Este projeto utiliza o modelo **Google Gemini**. Para rodar localmente, você precisa criar sua própria chave de API:  
+
+1. Acesse o [Google AI Studio](https://aistudio.google.com/app/apikey).  
+2. Gere uma nova chave de API.  
+3. Na raiz do projeto, crie um arquivo chamado `.env`.  
+4. Adicione a chave no seguinte formato:  
+
+GOOGLE_API_KEY="SUA_CHAVE_API_AQUI"
+
+### 4. Adicionar documentos na pasta pdfs/.
+
+### 5. Executar o notebook:
 
 
-RAG – Retrieval-Augmented Generation
-
-É uma técnica usada em modelos de linguagem (como ChatGPT, LLaMA, etc.) para melhorar a geração de respostas.
-
-Funciona combinando duas coisas:
-
-Recuperação (Retrieval): o modelo procura informações em uma base de dados externa (documentos, PDFs, sites, etc.).
-
-Geração (Generation): o modelo usa essas informações para gerar respostas precisas e contextualizadas.
-
-Resumo simples:
-
-O RAG ajuda o modelo a não depender só do que ele “lembra”, mas também buscar dados externos para dar respostas mais confiáveis.
-
-
-Nesta aula, você vai:
-Carregar e processar documentos PDF.
-Dividir textos longos em chunks para otimizar a busca de informações.
-Criar embeddings e armazenar em uma Vector Store com FAISS.
-Construir uma chain RAG que busca contexto e gera respostas baseadas em documentos.
-Formatar respostas com citações exatas das fontes consultadas.
