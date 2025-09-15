@@ -34,6 +34,9 @@ pdfs/ → documentos que servem como base de conhecimento.
 
 .env → chave da API do Google Gemini (não incluída no repositório).
 
+requirements.txt
+
+
 ## Como Rodar
 
 ### 1. Criar ambiente virtual:
@@ -57,6 +60,6 @@ GOOGLE_API_KEY="SUA_CHAVE_API_AQUI"
 
 ### 4. Adicionar documentos na pasta pdfs/.
 
-### 5. Executar o notebook:
+### 5. Executar o notebook
 
 
