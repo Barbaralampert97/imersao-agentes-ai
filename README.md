@@ -1,3 +1,7 @@
+
+![Capa da Imersão] (img/alura_1.jpg)
+
+
 # Imersão Agentes AI – Projeto de Service Desk Inteligente
 
 Este projeto foi desenvolvido como parte da Imersão de Agentes de IA da Alura, com foco em construir um Service Desk inteligente que automatiza a triagem de solicitações e responde perguntas com base em documentos internos.
