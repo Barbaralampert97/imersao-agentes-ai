@@ -1,5 +1,5 @@
 
-![Capa da Imersão] (img/alura_1.jpg)
+![Capa da Imersão](img/alura_1.jpg)
 
 
 # Imersão Agentes AI – Projeto de Service Desk Inteligente
